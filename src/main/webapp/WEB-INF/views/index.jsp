@@ -37,7 +37,7 @@
 </section>
 
 <section class="steps">
-    <h2>Wystarczą 4 proste kroki</h2>
+    <h2 id="zaloz">Wystarczą 4 proste kroki</h2>
 
     <div class="steps--container">
         <div class="steps--item">
@@ -62,12 +62,12 @@
         </div>
     </div>
 
-    <a href="#" class="btn btn--large">Załóż konto</a>
+    <a href="#zaloz" class="btn btn--large">Załóż konto</a>
 </section>
 
 <section class="about-us">
     <div class="about-us--text">
-        <h2>O nas</h2>
+        <h2 id="o-nas">O nas</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas vitae animi rem pariatur incidunt libero
             optio esse quisquam illo omnis.</p>
         <img src="<c:url value="resources/images/signature.svg"/>" class="about-us--text-signature" alt="Signature"/>
