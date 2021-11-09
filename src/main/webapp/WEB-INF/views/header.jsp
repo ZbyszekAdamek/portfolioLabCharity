@@ -12,10 +12,10 @@
 
         <ul>
             <li><a href="#" class="btn btn--without-border active">Start</a></li>
-            <li><a href="#" class="btn btn--without-border">O co chodzi?</a></li>
-            <li><a href="" class="btn btn--without-border">O nas</a></li>
-            <li><a href="#" class="btn btn--without-border">Fundacje i organizacje</a></li>
-            <li><a href="#" class="btn btn--without-border">Kontakt</a></li>
+            <li><a href="/#zaloz" class="btn btn--without-border">O co chodzi?</a></li>
+            <li><a href="/#o-nas" class="btn btn--without-border">O nas</a></li>
+            <li><a href="/#fundations" class="btn btn--without-border">Fundacje i organizacje</a></li>
+            <li><a href="/contact#contact" class="btn btn--without-border">Kontakt</a></li>
         </ul>
     </nav>
 

@@ -13,4 +13,9 @@ public class HomeController {
     public String homeAction(Model model){
         return "index";
     }
+
+    @RequestMapping("/contact")
+    public String contactAction(){
+        return "footer";
+    }
 }

@@ -77,7 +77,7 @@
 </section>
 
 <section class="help">
-    <h2>Komu pomagamy?</h2>
+    <h2 id="fundations">Komu pomagamy?</h2>
 
     <!-- SLIDE 1 -->
     <div class="help--slides active" data-id="1">
