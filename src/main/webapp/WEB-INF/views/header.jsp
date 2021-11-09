@@ -11,7 +11,7 @@
         </ul>
 
         <ul>
-            <li><a href="#" class="btn btn--without-border active">Start</a></li>
+            <li><a href="/#start" class="btn btn--without-border active">Start</a></li>
             <li><a href="/#zaloz" class="btn btn--without-border">O co chodzi?</a></li>
             <li><a href="/#o-nas" class="btn btn--without-border">O nas</a></li>
             <li><a href="/#fundations" class="btn btn--without-border">Fundacje i organizacje</a></li>
@@ -21,7 +21,7 @@
 
     <div class="slogan container container--90">
         <div class="slogan--item">
-            <h1>
+            <h1 id="start">
                 Zacznij pomagać!<br/>
                 Oddaj niechciane rzeczy w zaufane ręce
             </h1>
