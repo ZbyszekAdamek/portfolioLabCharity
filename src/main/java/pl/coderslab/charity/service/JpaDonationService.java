@@ -18,4 +18,10 @@ public class JpaDonationService implements DonationService {
     public List<Donation> getAllDonations() {
         return donationRepository.findAll();
     }
+
+    @Override
+    public Integer getTotalQuantity() {
+        List<Donation>donations = donationRepository.findAll();
+        return donations.stream().mapToInt(Donation::getQuantity).sum();
+    }
 }

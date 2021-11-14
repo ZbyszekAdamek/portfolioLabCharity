@@ -22,6 +22,7 @@ private final JpaDonationService jpaDonationService;
     public String homeAction(Model model){
         model.addAttribute("institutions", jpaInstitutionService.getAllInstitutions());
         model.addAttribute("donations", jpaDonationService.getAllDonations());
+        model.addAttribute("quantity", jpaDonationService.getTotalQuantity());
         return "index";
     }
 
