@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.coderslab.charity.entity.Donation;
 import pl.coderslab.charity.service.JpaCategoryService;
+import pl.coderslab.charity.service.JpaDonationService;
 import pl.coderslab.charity.service.JpaInstitutionService;
 
 
@@ -14,10 +15,12 @@ public class DonationController {
 
     private final JpaInstitutionService jpaInstitutionService;
     private final JpaCategoryService jpaCategoryService;
+    private final JpaDonationService jpaDonationService;
 
-    public DonationController(JpaInstitutionService jpaInstitutionService, JpaCategoryService jpaCategoryService) {
+    public DonationController(JpaInstitutionService jpaInstitutionService, JpaCategoryService jpaCategoryService, JpaDonationService jpaDonationService) {
         this.jpaInstitutionService = jpaInstitutionService;
         this.jpaCategoryService = jpaCategoryService;
+        this.jpaDonationService = jpaDonationService;
     }
 
 
@@ -30,7 +33,8 @@ public class DonationController {
     }
 
     @PostMapping("/form")
-    public String formAction(){
-        return "index";
+    public String formAction(Donation donation){
+        jpaDonationService.save(donation);
+        return "form";
     }
 }

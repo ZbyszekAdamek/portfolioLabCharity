@@ -18,16 +18,19 @@
 <%@ include file="header.jsp" %>
 
 <form:form method="post" modelAttribute="donation">
-<form:checkboxes path="categories"
-                 items="${categories}"/>
-<form:select path="institution" items="${institutions}"/>
-<form:input path="zipCode" />
-<form:input path="street" />
-<form:input path="city"/>
-<form:input path="quantity"/>
-<form:textarea path="pickUpComment"/>
-<form:input type="date" path="pickUpDate"/>
-<form:input type="time" path="pickUpTime" />
+Kategoria:
+    <form:checkboxes path="categories"
+                 items="${categories}" itemLabel="name" itemValue="id"/><br/>
+Organizacja: <form:select path="institution" items="${institutions}" itemLabel="name"
+itemValue="id"/><br/>
+Kod pocztowy: <form:input path="zipCode" /><br/>
+Ulica: <form:input path="street" /><br/>
+Miasto: <form:input path="city"/><br/>
+Ilość: <form:input path="quantity"/><br/>
+Komentarz: <form:textarea path="pickUpComment"/><br/>
+Data odbioru: <form:input type="date" path="pickUpDate"/><br/>
+Godzina odbioru: <form:input type="time" path="pickUpTime" /><br/>
+    <input type="submit">
 </form:form>
 
 <script src="<c:url value="resources/js/app.js"/>"></script>

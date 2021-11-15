@@ -14,6 +14,7 @@ public class JpaDonationService implements DonationService {
         this.donationRepository = donationRepository;
     }
 
+
     @Override
     public List<Donation> getAllDonations() {
         return donationRepository.findAll();
@@ -23,5 +24,10 @@ public class JpaDonationService implements DonationService {
     public Integer getTotalQuantity() {
         List<Donation>donations = donationRepository.findAll();
         return donations.stream().mapToInt(Donation::getQuantity).sum();
+    }
+
+    @Override
+    public Donation save(Donation donation) {
+        return donationRepository.save(donation);
     }
 }
