@@ -35,6 +35,6 @@ public class DonationController {
     @PostMapping("/form")
     public String formAction(Donation donation){
         jpaDonationService.save(donation);
-        return "form";
+        return "redirect:/";
     }
 }
