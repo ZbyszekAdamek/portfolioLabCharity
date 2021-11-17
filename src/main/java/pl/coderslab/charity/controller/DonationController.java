@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import pl.coderslab.charity.entity.Donation;
 import pl.coderslab.charity.service.JpaCategoryService;
 import pl.coderslab.charity.service.JpaDonationService;
@@ -23,6 +24,10 @@ public class DonationController {
         this.jpaDonationService = jpaDonationService;
     }
 
+    @RequestMapping("/formSummary")
+    public String contactAction(){
+        return "formSummary";
+    }
 
     @GetMapping("/form")
     public String initForm(Model model) {
@@ -33,7 +38,7 @@ public class DonationController {
     }
 
     @PostMapping("/form")
-    public String formAction(Donation donation){
+    public String formAction(Donation donation, Model model){
         jpaDonationService.save(donation);
         return "redirect:/";
     }

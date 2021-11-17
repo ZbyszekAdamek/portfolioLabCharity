@@ -172,3 +172,45 @@ document.addEventListener("DOMContentLoaded", function() {
     new FormSteps(form);
   }
 });
+
+function finishForm() {
+  const summaryQuantity = document.querySelector('#summaryQuantity');
+  const summaryThings = document.querySelector('#summaryThings');
+  const summaryInstitution = document.querySelector('#summaryInstitution');
+  const summaryStreet = document.querySelector('#summaryStreet');
+  const summaryCity = document.querySelector('#summaryCity');
+  const summaryZipcode = document.querySelector('#summaryZipcode');
+  const summaryDate = document.querySelector('#summaryPickupdate');
+  const summaryTime = document.querySelector('#summaryPickuptime');
+  const summaryComment = document.querySelector('#summaryPickupcomment');
+  const form = document.querySelector("form");
+
+  let arrInstitutions = Array.from(document.getElementsByClassName("institutionTitle"));
+  let institutionName = "";
+  arrInstitutions.forEach(function (element){
+    if(element.parentElement.parentElement.firstElementChild.checked){
+      institutionName = element.innerText;
+    }
+  });
+
+  let arrCategories = Array.from(document.getElementsByClassName("categoryDescription"));
+  let categoriesNames = "";
+  arrCategories.forEach(function (element){
+    if(element.parentElement.firstElementChild.checked){
+      categoriesNames = categoriesNames + element.innerText + "; ";
+    }
+  });
+  if(categoriesNames.length > 0){
+    categoriesNames = categoriesNames.trim().substring(0, categoriesNames.length-2);
+  }
+
+  summaryQuantity.innerHTML = form.elements['quantity'].value;
+  summaryThings.innerHTML = categoriesNames;
+  summaryInstitution.innerHTML = institutionName;
+  summaryStreet.innerHTML = form.elements['street'].value;
+  summaryCity.innerHTML = form.elements['city'].value;
+  // summaryZipcode.innerHTML = form.elements['zipCode'].value;
+  summaryDate.innerHTML = form.elements['pickUpDate'].value;
+  summaryTime.innerHTML = form.elements['pickUpTime'].value;
+  summaryComment.innerHTML = form.elements['pickUpComment'].value;
+};

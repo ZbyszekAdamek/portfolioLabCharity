@@ -62,7 +62,6 @@
         </div>
     </div>
 
-    <a href="#zaloz" class="btn btn--large">Załóż konto</a>
 </section>
 
 <section class="about-us">
