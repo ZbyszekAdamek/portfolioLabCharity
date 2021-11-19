@@ -25,14 +25,14 @@ public class Donation {
     private LocalDate pickUpDate;
     private LocalTime pickUpTime;
     private String pickUpComment;
-    private Integer phoneNumber;
+    private Integer phone;
 
-    public Integer getPhoneNumber() {
-        return phoneNumber;
+    public Integer getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(Integer phoneNumber) {
+        this.phone = phoneNumber;
     }
 
     public Long getId() {

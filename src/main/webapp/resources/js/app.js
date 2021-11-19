@@ -179,6 +179,7 @@ function finishForm() {
   const summaryInstitution = document.querySelector('#summaryInstitution');
   const summaryStreet = document.querySelector('#summaryStreet');
   const summaryCity = document.querySelector('#summaryCity');
+  const summaryPhone = document.querySelector('#summaryPhone');
   const summaryZipcode = document.querySelector('#summaryZipcode');
   const summaryDate = document.querySelector('#summaryPickupdate');
   const summaryTime = document.querySelector('#summaryPickuptime');
@@ -208,8 +209,9 @@ function finishForm() {
   summaryThings.innerHTML = categoriesNames;
   summaryInstitution.innerHTML = institutionName;
   summaryStreet.innerHTML = form.elements['street'].value;
+  summaryPhone.innerHTML = form.elements['phone'].value;
   summaryCity.innerHTML = form.elements['city'].value;
-  // summaryZipcode.innerHTML = form.elements['zipCode'].value;
+  summaryZipcode.innerHTML = form.elements['zipCode'].value;
   summaryDate.innerHTML = form.elements['pickUpDate'].value;
   summaryTime.innerHTML = form.elements['pickUpTime'].value;
   summaryComment.innerHTML = form.elements['pickUpComment'].value;
