@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<%@include file="header.jsp" %>
 <section class="form--steps">
   <div class="form--steps-instructions">
     <div class="form--steps-container">
@@ -135,61 +134,23 @@
           </div>
         </div>
         <div class="form-group form-group--buttons">
-          <button type="button" class="btn prev-step">Wstecz</button>
-          <button type="button" class="btn next-step" onclick="finalizingForm()">Dalej</button>
-        </div>
-      </div>
-
-      <!-- STEP 6 -->
-      <div data-step="5">
-        <h3>Podsumowanie Twojej darowizny</h3>
-
-        <div class="summary">
-          <div class="form-section">
-            <h4>Oddajesz:</h4>
-            <ul>
-              <li>
-                <span class="icon icon-bag"></span>
-                <span id="finalQuantity" class="summary--text"></span>
-              </li>
-
-              <li>
-                <span class="icon icon-hand"></span>
-                <span id="institutionName" class="summary--text"></span>
-              </li>
-            </ul>
+          <div class="form-group form-group--buttons">
+            <button type="button" class="btn prev-step">Wstecz</button>
+            <button type="submit" class="btn">Potwierdzam</button>
           </div>
-
-          <div class="form-section form-section--columns">
-            <div class="form-section--column">
-              <h4>Adres odbioru:</h4>
-              <ul>
-                <li id="liStreet"></li>
-                <li id="liCity" ></li>
-                <li id="liPostCode"></li>
-                <li id="liPhone"></li>
-              </ul>
-            </div>
-
-            <div class="form-section--column">
-              <h4>Termin odbioru:</h4>
-              <ul>
-                <li id="liData"></li>
-                <li id="liTime"></li>
-                <li id="liComment"></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group form-group--buttons">
-          <button type="button" class="btn prev-step">Wstecz</button>
-          <button type="submit" class="btn">Potwierdzam</button>
         </div>
       </div>
     </form>
   </div>
 </section>
+
+<a href="/#start" class="btn btn--without-border">Start</a>
+<a href="/form" class="btn btn--without-border">Oddaj dar</a>
+<a href="/#zaloz" class="btn btn--without-border">O co chodzi?</a>
+<a href="/#o-nas" class="btn btn--without-border">O nas</a><
+<a href="/#fundations" class="btn btn--without-border">Fundacje i organizacje</a>
+<a href="/contact#contact" class="btn btn--without-border">Kontakt</a>
+
 <%@include file="footer.jsp" %>
 
 <script src="../../resources/js/app.js"></script>

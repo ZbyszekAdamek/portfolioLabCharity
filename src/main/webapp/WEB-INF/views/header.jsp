@@ -8,6 +8,7 @@
 
         <ul>
             <li><a href="/#start" class="btn btn--without-border active">Start</a></li>
+            <li><a href="/form" class="btn btn--without-border">Oddaj dar</a></li>
             <li><a href="/#zaloz" class="btn btn--without-border">O co chodzi?</a></li>
             <li><a href="/#o-nas" class="btn btn--without-border">O nas</a></li>
             <li><a href="/#fundations" class="btn btn--without-border">Fundacje i organizacje</a></li>
